@@ -49,7 +49,7 @@ contract UnstoppableVault is IERC3156FlashLender, ReentrancyGuard, Owned, ERC462
 
         return totalAssets();
     }
-
+ 
     /**
      * @inheritdoc IERC3156FlashLender
      */
@@ -57,7 +57,7 @@ contract UnstoppableVault is IERC3156FlashLender, ReentrancyGuard, Owned, ERC462
         if (address(asset) != _token) {
             revert UnsupportedCurrency();
         }
-
+        // and 
         if (block.timestamp < end && _amount < maxFlashLoan(_token)) {
             return 0;
         } else {

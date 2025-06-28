@@ -16,7 +16,7 @@ contract NaiveReceiverPool is Multicall, IERC3156FlashLender {
     address public immutable trustedForwarder;
     address public immutable feeReceiver;
 
-    mapping(address => uint256) public deposits;
+    mapping(address => uint256) public deposits; 
     uint256 public totalDeposits;
 
     error RepayFailed();
